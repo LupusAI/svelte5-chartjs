@@ -1,8 +1,11 @@
-# svelte-chartjs
+# svelte5-chartjs
 
 <img align="right" width="150" height="150" alt="svelte-chartjs logo" src="https://raw.githubusercontent.com/SauravKanchan/svelte-chartjs/master/assets/svelte-chartjs.png">
 
-Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
+Svelte 5 wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
+
+> This is a fork of the [svelte-chartjs](https://github.com/SauravKanchan/svelte-chartjs) repo, which has been inactive for some time.
+
 
 [![npm version](https://badge.fury.io/js/svelte-chartjs.svg)](https://badge.fury.io/js/svelte-chartjs)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs?ref=badge_shield)
@@ -28,11 +31,11 @@ Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contrib
 Install this library with peer dependencies:
 
 ```bash
-pnpm add svelte-chartjs chart.js
+pnpm add svelte5-chartjs chart.js
 # or
-yarn add svelte-chartjs chart.js
+yarn add svelte5-chartjs chart.js
 # or
-npm i svelte-chartjs chart.js
+npm i svelte5-chartjs chart.js
 ```
 
 <hr />
@@ -47,7 +50,7 @@ Need an API to fetch data? Consider [Cube](https://cube.dev/?ref=eco-svelte-char
 
 ```svelte
 <script>
-  import { Line } from 'svelte-chartjs'
+  import { Line } from 'svelte5-chartjs'
 </script>
 
 <Line data={...} />
@@ -66,58 +69,23 @@ In order for Chart.js to obey the custom size you need to set `maintainAspectRat
 />
 ```
 
-## Migration from v1 to v2
-
-With v2, this library introduces a number of breaking changes. In order to improve performance, offer new features, and improve maintainability, it was necessary to break backwards compatibility, but we aimed to do so only when worth the benefit.
-
-### Change component import path
-
-v1:
-
-```javascript
-import Line from 'svelte-chartjs/src/Line.svelte'
-```
-
-v2:
-
-```javascript
-import { Line } from 'svelte-chartjs'
-```
-
 ### Tree-shaking
 
-v2 of this library, [just like Chart.js v3](https://www.chartjs.org/docs/latest/getting-started/v3-migration.html#setup-and-installation), is tree-shakable. It means that you need to import and register the controllers, elements, scales, and plugins you want to use.
+This library is tree-shakable [just like Chart.js v3](https://www.chartjs.org/docs/latest/getting-started/v3-migration.html#setup-and-installation). It means that you need to import and register the controllers, elements, scales, and plugins you want to use.
 
 For a list of all the available items to import, see [Chart.js docs](https://www.chartjs.org/docs/latest/getting-started/integration.html#bundlers-webpack-rollup-etc).
 
-v1:
-
 ```javascript
-import Line from 'svelte-chartjs/src/Line.svelte'
-```
-
-v2 — lazy way:
-
-```javascript
-import { Line } from 'svelte-chartjs'
-import 'chart.js/auto';
-```
-
-v2 — tree-shakable way:
-
-```javascript
-import { Line } from 'svelte-chartjs'
+import { Line } from 'svelte5-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale } from 'chart.js';
 
 ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
 ```
 
-Using the "lazy way" is okay to simplify the migration, but please consider using the tree-shakable way to decrease the bundle size.
-
 Please note that typed chart components register their controllers by default, so you don't need to register them by yourself. For example, when using the Pie component, you don't need to register PieController explicitly.
 
 ```javascript
-import { Pie } from 'svelte-chartjs';
+import { Pie } from 'svelte5-chartjs';
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
