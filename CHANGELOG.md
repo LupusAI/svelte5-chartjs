@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.0.0 (2025-05-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* now package is module type, new exports in package.json
+* svelte files were removed from the package, now you should use named exports
+* add typescript and tree-shaking for chart.js imports
+
+### Features
+
+* add chart.js v4 support ([#86](https://github.com/LupusAI/svelte5-chartjs/issues/86)) ([cbc497c](https://github.com/LupusAI/svelte5-chartjs/commit/cbc497c020b3e810acef8d0fb7a6cbe68d77e0f7))
+* add typescript ([#41](https://github.com/LupusAI/svelte5-chartjs/issues/41)) ([2fe9aba](https://github.com/LupusAI/svelte5-chartjs/commit/2fe9aba8d38372faee710e68746c5de20b27ba6e))
+* events forwarding, getDatasetAtEvent getElementAtEvent getElementsAtEvent events utils ([#63](https://github.com/LupusAI/svelte5-chartjs/issues/63)) ([e84bd77](https://github.com/LupusAI/svelte5-chartjs/commit/e84bd7799ea4bd787cc20d2d28701dcca280f1ac))
+* new prop types, expose chart instance ([#62](https://github.com/LupusAI/svelte5-chartjs/issues/62)) ([d59111a](https://github.com/LupusAI/svelte5-chartjs/commit/d59111a66f923678e85ac79d179285d89270c223))
+* update mode prop ([#65](https://github.com/LupusAI/svelte5-chartjs/issues/65)) ([d6e5506](https://github.com/LupusAI/svelte5-chartjs/commit/d6e55060cc69b712bffb514205c0f0115dcd204d))
+
+
+### Bug Fixes
+
+* add path to types ([#56](https://github.com/LupusAI/svelte5-chartjs/issues/56)) ([a249af6](https://github.com/LupusAI/svelte5-chartjs/commit/a249af66a58fb5c036430ec75016c7416f1ad6d2))
+* **base:** Add chart.destroy() to fix memory leak. Fixes [#25](https://github.com/LupusAI/svelte5-chartjs/issues/25) ([d49ffa1](https://github.com/LupusAI/svelte5-chartjs/commit/d49ffa1c015282bb0551e26a94341491a986981c))
+* chart ref prop type fix ([#70](https://github.com/LupusAI/svelte5-chartjs/issues/70)) ([893d78c](https://github.com/LupusAI/svelte5-chartjs/commit/893d78cae03c5ccb43dacabcf1b27bff958b1a5c))
+* **deps:** update dependency chart.js to v4 ([#84](https://github.com/LupusAI/svelte5-chartjs/issues/84)) ([112b2fa](https://github.com/LupusAI/svelte5-chartjs/commit/112b2faca1e383db4b14ed5c9578a1d1ec0ff538))
+* **deps:** update dependency svelte to v4 ([c8a12cc](https://github.com/LupusAI/svelte5-chartjs/commit/c8a12ccdf837121fc48ac6947d540a011f89561d))
+* **exports:** update types path to use the correct type def ([539e2c7](https://github.com/LupusAI/svelte5-chartjs/commit/539e2c74f6900cd301d643e454865918c010a979))
+* files list to publish ([f7cb847](https://github.com/LupusAI/svelte5-chartjs/commit/f7cb847e14e2789c3b5d008a76c6bf7a6aa5352e))
+* rename components Base -> Chart, Polar -> PolarArea ([#64](https://github.com/LupusAI/svelte5-chartjs/issues/64)) ([ec905cc](https://github.com/LupusAI/svelte5-chartjs/commit/ec905ccfaf51c0374211096e4656d061ab85f6da))
+* **size:** update size test to use the new build ([c850b88](https://github.com/LupusAI/svelte5-chartjs/commit/c850b88352560376224e086a3bd3b66e0c7e09d5))
+* typed components update fix ([#78](https://github.com/LupusAI/svelte5-chartjs/issues/78)) ([2a34f4f](https://github.com/LupusAI/svelte5-chartjs/commit/2a34f4f4a23b6b2860bb44d681e0ad7159fe9ae3))
+* upgrade chart.js with fixed types ([3bd69dc](https://github.com/LupusAI/svelte5-chartjs/commit/3bd69dcf297325061401e679ef31b6d3eeaa30a5))
+
+
+* remove svelte files from package ([#54](https://github.com/LupusAI/svelte5-chartjs/issues/54)) ([82b871b](https://github.com/LupusAI/svelte5-chartjs/commit/82b871b1b54baa89a28c3e60256f85ed5aff7fed))
+
+
+### build
+
+* use svelte-package ([#75](https://github.com/LupusAI/svelte5-chartjs/issues/75)) ([1eb4efe](https://github.com/LupusAI/svelte5-chartjs/commit/1eb4efefffb367fe0338e37c89d20f89dcdff807))
+
 ### [3.1.5](https://github.com/SauravKanchan/svelte-chartjs/compare/v3.1.4...v3.1.5) (2024-02-06)
 
 
